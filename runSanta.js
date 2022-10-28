@@ -1,0 +1,18 @@
+"use strict";
+exports.__esModule = true;
+var santa_1 = require("./santa");
+var bag_1 = require("./bag");
+var present_1 = require("./present");
+var sled_1 = require("./sled");
+var santaClaus = new santa_1.Santa("Santa", 80);
+var santaSled = new sled_1.Sled([]);
+var santaBag1 = new bag_1.Bag(20, bag_1.BagType.CANVAS);
+var presentOne = new present_1.Present("playstation", 8, present_1.PresentType.HARD);
+var presentTwo = new present_1.Present("sweather", 3, present_1.PresentType.SOFT);
+santaSled.addBag(santaBag1);
+santaBag1.addPresent(presentOne);
+santaBag1.addPresent(presentTwo);
+console.log(santaSled);
+console.log(santaBag1.totalWeight());
+presentOne.print();
+santaBag1.print();
